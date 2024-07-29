@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Green Gleam Cleaners</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="signup.js" defer></script>
+    <style>
+        /* Use the same CSS from index.html */
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const signUpForm = document.getElementById('signUpForm');
+            signUpForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const mailtoLink = `mailto:mondaykingsley80@gmail.com?cc=${email}&subject=Sign Up Form Submission&body=Username: ${username}%0AEmail: ${email}`;
+                window.location.href = mailtoLink;
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -14,9 +27,10 @@
         </div>
         <main>
             <ul>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="register.html">Register</a></li>
                 <li><a href="address.html">Address</a></li>
                 <li><a href="sign up.html">Sign Up</a></li>
             </ul>
@@ -28,6 +42,7 @@
 
     <main>
         <h3>Sign Up</h3>
+        <img src="signup_image.jpg" alt="Sign Up Image" class="image">
         <form id="signUpForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
@@ -42,9 +57,9 @@
     <footer>
         <aside>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="address.html">Address</a></li>
             </ul>
