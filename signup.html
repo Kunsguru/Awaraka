@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Green Gleam Cleaners</title>
+    <style>
+        /* Add internal CSS here (same as the one in index.html) */
+    </style>
+    <script>
+        function submitForm() {
+            const form = document.getElementById('signUpForm');
+            const formData = new FormData(form);
+            const mailtoLink = `mailto:mondaykingsley80@gmail.com?cc=${formData.get('email')}&subject=Sign Up&body=Username: ${formData.get('username')}%0AEmail: ${formData.get('email')}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1>Green Gleam Cleaners</h1>
+        </div>
+        <main>
+            <ul>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="address.html">Address</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </main>
+        <nav>
+            <input type="text" id="searchQuery" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Sign Up</h3>
+        <form id="signUpForm" onsubmit="submitForm(); return false;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+
+    <footer>
+        <aside>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="address.html">Address</a></li>
+            </ul>
+        </aside>
+        <div class="foot">
+            <p>2024 GreenGleam Cleaners | Your Trusted Partner for Eco-Friendly Cleaning</p>
+        </div>
+    </footer>
+</body>
+</html>
