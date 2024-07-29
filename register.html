@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Green Gleam Cleaners</title>
+    <style>
+        /* Use the same CSS from index.html */
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const registerForm = document.getElementById('registerForm');
+            registerForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const mailtoLink = `mailto:mondaykingsley80@gmail.com?cc=${email}&subject=Registration Form Submission&body=Name: ${name}%0AEmail: ${email}`;
+                window.location.href = mailtoLink;
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1>Green Gleam Cleaners</h1>
+        </div>
+        <main>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="address.html">Address</a></li>
+                <li><a href="sign up.html">Sign Up</a></li>
+            </ul>
+        </main>
+        <nav>
+            <input type="text" placeholder="Search...">
+        </nav>
+    </header>
+
+    <main>
+        <h3>Register</h3>
+        <img src="register_image.jpg" alt="Register Image" class="image">
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+
+    <footer>
+        <aside>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="address.html">Address</a></li>
+            </ul>
+        </aside>
+        <div class="foot">
+            <p>2024 GreenGleam Cleaners | Your Trusted Partner for Eco-Friendly Cleaning</p>
+        </div>
+    </footer>
+</body>
+</html>
